@@ -2,32 +2,28 @@ package br.com.alura.school.matriculation;
 
 import br.com.alura.school.course.Course;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 public class Matriculation {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Size(max=10)
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String courseCode;
 
     @Size(max=20)
     @NotBlank
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String username;
 
     @Column(nullable = false)

@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS Matriculation;
 
 CREATE TABLE Matriculation (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    course_code VARCHAR(10) NOT NULL UNIQUE,
-    username VARCHAR(20) NOT NULL UNIQUE,
+    course_code VARCHAR(10) NOT NULL,
+    username VARCHAR(20) NOT NULL,
     date TIMESTAMP
 );
