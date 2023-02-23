@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
+public
 class Course {
 
     @Id
@@ -27,6 +28,7 @@ class Course {
     private String name;
 
     private String description;
+
 
     @Deprecated
     protected Course() { }
