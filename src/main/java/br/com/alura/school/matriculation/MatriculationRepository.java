@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-interface MatriculationRepository extends JpaRepository<Matriculation, Long> {
+public interface MatriculationRepository extends JpaRepository<Matriculation, Long> {
     Optional<Matriculation> findAllByCourseCode(String code);
     Optional<Matriculation> findByUsername(String username);
 
